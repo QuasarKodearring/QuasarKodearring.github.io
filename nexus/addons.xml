@@ -1,31 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addons>
-  <addon id="repository.anon.iptv" name="Dutch IPTV Repository" version="1.6.0" provider-name="Anon">
-    <requires>
-      <import addon="xbmc.addon" version="12.0.0"/>
-    </requires>
-    <extension point="xbmc.addon.repository" name="Dutch IPTV Repository">
-      <dir minversion="19.9.0">
-        <info compressed="false">https://dut-iptv.github.io/nexus/addons.xml</info>
-        <checksum>https://dut-iptv.github.io/nexus/addons.xml.md5</checksum>
-        <datadir zip="true">https://dut-iptv.github.io/nexus/</datadir>
-        <hashes>false</hashes>
-        <artdir>https://dut-iptv.github.io/nexus/</artdir>
-      </dir>
-      <dir minversion="19.0.0">
-        <info compressed="false">https://dut-iptv.github.io/matrix/addons.xml</info>
-        <checksum>https://dut-iptv.github.io/matrix/addons.xml.md5</checksum>
-        <datadir zip="true">https://dut-iptv.github.io/matrix/</datadir>
-        <hashes>false</hashes>
-        <artdir>https://dut-iptv.github.io/matrix/</artdir>
-      </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-      <summary lang="en">Dutch IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo) repository</summary>
-      <description lang="en">Dutch IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo) repository</description>
-      <summary lang="nl">Repository voor Nederlandse IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo)</summary>
-      <description lang="nl">Repository voor Nederlandse IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo)</description>
-      <platform>all</platform>
-    </extension>
-  </addon>
-</addons>
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="repository.anon.iptv" name="Dutch IPTV Repository" version="2.0.1" provider-name="Anon">
+  <requires>
+    <import addon="xbmc.addon" version="12.0.0" />
+  </requires>
+  <extension point="xbmc.addon.repository" name="Dutch IPTV Repository">
+    <dir minversion="19.9.0">
+      <info compressed="false">https://QuasarKodearring.github.io/nexus/addons.xml</info>
+      <checksum>https://QuasarKodearring.github.io/nexus/addons.xml.md5</checksum>
+      <datadir zip="true">https://QuasarKodearring.github.io/nexus/</datadir>
+      <hashes>false</hashes>
+      <artdir>https://QuasarKodearring.github.io/nexus/</artdir>
+    </dir>
+    <dir minversion="19.0.0">
+      <info compressed="false">https://QuasarKodearring.github.io/matrix/addons.xml</info>
+      <checksum>https://QuasarKodearring.github.io/matrix/addons.xml.md5</checksum>
+      <datadir zip="true">https://QuasarKodearring.github.io/matrix/</datadir>
+      <hashes>false</hashes>
+      <artdir>https://QuasarKodearring.github.io/matrix/</artdir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Dutch IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo) repository</summary>
+    <description lang="en">Dutch IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo) repository</description>
+    <summary lang="nl">Repository voor Nederlandse IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo)</summary>
+    <description lang="nl">Repository voor Nederlandse IPTV (CanalDigitaal, NLZiet, KPN, Telenet (BE), Telfort, T-Mobile, Videoland, XS4All, Ziggo)</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="service.dutiptv.proxy" name="Dut-IPTV Proxy" provider-name="Anon" version="2.0.1+Nexus.1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" version="2.25.0" />
+    <import addon="script.module.pytz" version="2019.3.0" />
+  </requires>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Proxy for use with Dut-IPTV addons</summary>
+    <summary lang="nl_NL">Proxy voor gebruik met de Dut-IPTV addons</summary>
+    <description lang="en_GB">Proxy for use with Dut-IPTV addons</description>
+    <description lang="nl_NL">Proxy voor gebruik met de Dut-IPTV addons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="plugin.video.ziggo" name="Ziggo GO" provider-name="Anon" version="2.0.1+Nexus.1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="inputstream.adaptive" version="19.0.0" />
+    <import addon="script.module.fuzzywuzzy" version="0.17.1+matrix.1" />
+    <import addon="script.module.pycryptodome" version="3.4.3" />
+    <import addon="script.module.pytz" version="2019.3.0" />
+    <import addon="script.module.requests" version="2.25.0" />
+    <import addon="service.dutiptv.proxy" version="2.0.1+Nexus.1" />
+    <import addon="script.module.inputstreamhelper" version="0.5.7" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Watch (Live) TV and content from Ziggo GO (Netherlands)</summary>
+    <summary lang="nl_NL">Bekijk (Live) TV en content van Ziggo GO (Nederland)</summary>
+    <description lang="en_GB">Watch (Live) TV and content from Ziggo GO (Netherlands). Subscription required.</description>
+    <description lang="nl_NL">Bekijk (Live) TV en content van Ziggo GO (Nederland). Abonnement vereist.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon></addons>

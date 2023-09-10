@@ -9,7 +9,7 @@
       <import addon="script.module.pytz" version="2019.3.0"/>
       <import addon="script.module.requests" version="2.25.0"/>
       <import addon="script.module.beautifulsoup4" version="4.6.2"/>
-      <import addon="service.dutiptv.proxy" version="1.4.4+matrix.1"/>
+      <import addon="service.dutiptv.proxy" version="2.0.1+Nexus.1"/>
       <import addon="script.module.inputstreamhelper" version="0.5.7"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
@@ -28,24 +28,24 @@
       </assets>
     </extension>
   </addon>
-  <addon id="repository.anon.iptv" name="Dutch IPTV Repository" version="1.6.0" provider-name="Anon">
+  <addon id="repository.anon.iptv" name="Dutch IPTV Repository" version="2.0.1" provider-name="Anon">
     <requires>
       <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository" name="Dutch IPTV Repository">
       <dir minversion="19.9.0">
-        <info compressed="false">https://dut-iptv.github.io/nexus/addons.xml</info>
-        <checksum>https://dut-iptv.github.io/nexus/addons.xml.md5</checksum>
-        <datadir zip="true">https://dut-iptv.github.io/nexus/</datadir>
+        <info compressed="false">https://QuasarKodearring.github.io/nexus/addons.xml</info>
+        <checksum>https://QuasarKodearring.github.io/nexus/addons.xml.md5</checksum>
+        <datadir zip="true">https://QuasarKodearring.github.io/nexus/</datadir>
         <hashes>false</hashes>
-        <artdir>https://dut-iptv.github.io/nexus/</artdir>
+        <artdir>https://QuasarKodearring.github.io/nexus/</artdir>
       </dir>
       <dir minversion="19.0.0">
-        <info compressed="false">https://dut-iptv.github.io/matrix/addons.xml</info>
-        <checksum>https://dut-iptv.github.io/matrix/addons.xml.md5</checksum>
-        <datadir zip="true">https://dut-iptv.github.io/matrix/</datadir>
+        <info compressed="false">https://QuasarKodearring.github.io/matrix/addons.xml</info>
+        <checksum>https://QuasarKodearring.github.io/matrix/addons.xml.md5</checksum>
+        <datadir zip="true">https://QuasarKodearring.github.io/matrix/</datadir>
         <hashes>false</hashes>
-        <artdir>https://dut-iptv.github.io/matrix/</artdir>
+        <artdir>https://QuasarKodearring.github.io/matrix/</artdir>
       </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
@@ -152,7 +152,7 @@
       <language/>
     </extension>
   </addon>
-  <addon id="service.dutiptv.proxy" name="Dut-IPTV Proxy" provider-name="Anon" version="1.4.4+matrix.1">
+  <addon id="service.dutiptv.proxy" name="Dut-IPTV Proxy" provider-name="Anon" version="2.0.1+Nexus.1">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests" version="2.25.0"/>
@@ -170,7 +170,7 @@
       </assets>
     </extension>
   </addon>
-  <addon id="plugin.video.ziggo" name="Ziggo GO" provider-name="Anon" version="1.4.7+matrix.1">
+  <addon id="plugin.video.ziggo" name="Ziggo GO" provider-name="Anon" version="2.0.1+Nexus.1">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="inputstream.adaptive" version="19.0.0"/>
@@ -178,7 +178,7 @@
       <import addon="script.module.pycryptodome" version="3.4.3"/>
       <import addon="script.module.pytz" version="2019.3.0"/>
       <import addon="script.module.requests" version="2.25.0"/>
-      <import addon="service.dutiptv.proxy" version="1.4.4+matrix.1"/>
+      <import addon="service.dutiptv.proxy" version="2.0.1+Nexus.1"/>
       <import addon="script.module.inputstreamhelper" version="0.5.7"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
